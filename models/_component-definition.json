@@ -35,6 +35,58 @@
           "...": "../blocks/*/_*.json#/definitions"
         }
       ]
+    },
+    {
+      "title": "Custom Form Components",
+      "id": "custom-components",
+      "components": [
+        {
+          "...": "../blocks/form/components/range/_range.json#/definitions"
+        }
+      ]
+    },
+    {
+      "title": "Healthcare",
+      "id": "healthcare-components",
+      "components": [
+        {
+          "title": "Find a Doctor",
+          "id": "find-a-doctor",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Find a Doctor",
+                  "model": "find-a-doctor",
+                  "key-value": true
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "title": "BFSI",
+      "id": "bfsi-components",
+      "components": [
+        {
+          "title": "Foreign Exchange Rates",
+          "id": "forex",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Forex",
+                  "model": "forex"
+                }
+              }
+            }
+          }
+        }
+      ]
     }
   ]
 }

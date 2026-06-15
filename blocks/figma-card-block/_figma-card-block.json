@@ -1,0 +1,124 @@
+{
+  "definitions": [
+    {
+      "title": "Figma Card Block",
+      "id": "figma-card-block",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Figma Card Block",
+              "filter": "figma-card-block"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Figma Card Item",
+      "id": "figma-card-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Figma Card Item",
+              "model": "figma-card-item"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "figma-card-item",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Image",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "eyebrow",
+          "label": "Eyebrow Label",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "headline",
+          "label": "Headline",
+          "value": ""
+        },
+        {
+          "component": "richtext",
+          "name": "description",
+          "value": "",
+          "label": "Description",
+          "valueType": "string"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "ctaLabel",
+          "label": "CTA Label",
+          "value": "Learn more"
+        },
+        {
+          "component": "aem-content",
+          "valueType": "string",
+          "name": "ctaLink",
+          "label": "CTA Link"
+        },
+        {
+          "component": "select",
+          "name": "ctaStyle",
+          "label": "CTA Style",
+          "valueType": "string",
+          "value": "button",
+          "options": [
+            { "name": "Primary Button", "value": "button" },
+            { "name": "Secondary Button", "value": "button-secondary" }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "figma-card-block",
+      "fields": [
+        {
+          "component": "select",
+          "name": "columns",
+          "label": "Column Layout",
+          "valueType": "string",
+          "value": "3",
+          "options": [
+            { "name": "2 Columns", "value": "2" },
+            { "name": "3 Columns", "value": "3" }
+          ]
+        },
+        {
+          "component": "boolean",
+          "name": "horizontal",
+          "label": "Horizontal Layout",
+          "value": false,
+          "valueType": "boolean"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "figma-card-block",
+      "components": [
+        "figma-card-item"
+      ]
+    }
+  ]
+}
